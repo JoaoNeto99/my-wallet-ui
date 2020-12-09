@@ -1,5 +1,5 @@
 export interface Rendimento {
     acao: string;
-    rendimentoPorcentagem: number;
+    rendimentoPorcento: number;
     rendimentoReal: number;
 }

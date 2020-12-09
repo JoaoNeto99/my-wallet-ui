@@ -27,8 +27,8 @@ export class RendimentoService {
   }
 
   // obtem o rendimento da carteira
-  getRendimento(): Observable<Rendimento[]> {
-    return this.httpClient.get<Rendimento[]>(this.url + '/' + 'carteira')
+  getRendimento(): Observable<Rendimento> {
+    return this.httpClient.get<Rendimento>(this.url + '/' + 'carteira')
     .pipe(
       retry(2),
       catchError(this.handleError)

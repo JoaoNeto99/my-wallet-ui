@@ -1,4 +1,4 @@
-<section>
+<section >
 <nav  fxLayout="row">
     <mat-toolbar class="flex-container">
         <a mat-button routerLink="/">
@@ -6,32 +6,46 @@
         </a>
     </mat-toolbar>
 </nav>
-
-<div class="container">
-    <div class="card">
-        <h3 class="card-header">Rendimento</h3>
-        <div class="card-body">
-            <table class="table">
-                <thead>
+<section class="">
+<!--Table Ações -->
+<section class="body d-inline-flex align-items-start flex-column">
+    <div class="container mb-auto" >
+        <div class="tabela-rendimento-carteira">            
+            <h3>Tabela de Ações</h3>
+            <table class="table table-sm">
+                <tbody *ngFor="let a of list">
                     <tr>
-                        <th scope="col">Acao</th>
-                        <th scope="col">Porcento</th>
-                        <th scope="col">Real</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ngFor="let rendimento of rendimentos[]">
-                        <td>{{rendimento.acao}}</td>
-                        <td>{{rendimento.rendimentoPorcentagem}}</td>
-                        <td>{{rendimento.rendimentoReal}}</td>
-                        
+                        <td>{{a.nome}}</td>
+                    </tr>   
+                    
+                </tbody>
+            </table>    
+        </div>
+    </div>
+
+
+<!--Table Carteira-Rendimento -->
+    <div class="container" >
+        <div class="tabela-rendimento-carteira">            
+            <h3>Rendimento da Carteira</h3>
+            <table class="table table-sm">
+                <tbody *ngFor="let rendimento of listRendimentoCarteira">
+                    <tr>
+                        <th scope="row">Real</th>
+                        <td>R$ {{rendimento.rendimentoReal}}</td>
+                    </tr>   
+                    <tr>
+                        <th scope="row">Porcento</th>
+                        <td>{{rendimento.rendimentoPorcento}}%</td>
                     </tr>
                 </tbody>
             </table>    
         </div>
-    </div> 
-</div>
-    <section fxFlexfill>
-        <router-outlet></router-outlet>
-    </section>
+    </div>
+
+</section>
+</section>
+<section fxFlexfill>
+    <router-outlet></router-outlet>
+</section>
 </section>

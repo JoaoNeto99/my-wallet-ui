@@ -2,21 +2,29 @@ mat-toolbar {
     background: darkslategray;
 }
 
-h2{
-    align-items: center;
-}
-
-h3 {
-    text-align: center;
+.tabela-rendimento-carteira {
+    
+    width: 240px;
     
 }
 
-.flex-container{
-    display: flex;
-    justify-content: stretch;
+.tabela-rendimento-carteira h3 {
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+}
+.body{
+    border: 1px solid #ccc;
+    height: 91.5vh;
+    background: chartreuse;
 }
 
 .container{
-    margin-top: 30px;
-    width: 400px;
+    background: coral;
+    width: 280px;
+}
+
+.box1 {
+    margin-top: 70px;
 }
