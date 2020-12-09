@@ -7,9 +7,10 @@ import { RendimentoService } from './services/rendimento.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-})
+}) //ng serve --proxy-config proxy.config.js
 export class AppComponent implements OnInit {
   title = 'my-wallet-ui';
+
 
   listRendimentoCarteira = new Array<Rendimento>();
 

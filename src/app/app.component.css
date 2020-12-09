@@ -17,14 +17,23 @@ mat-toolbar {
 .body{
     border: 1px solid #ccc;
     height: 91.5vh;
+    /*background: chartreuse;*/
+    float: left;
+}
+
+.body2{
+    border: 1px solid #ccc;
+    
     background: chartreuse;
+    padding: 10px;
 }
 
 .container{
-    background: coral;
+    /*background: coral;*/
     width: 280px;
 }
 
-.box1 {
-    margin-top: 70px;
-}
+
+.cadastro-usuario {
+    margin-left: 100px;
+} 

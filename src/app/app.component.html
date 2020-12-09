@@ -6,9 +6,9 @@
         </a>
     </mat-toolbar>
 </nav>
-<section class="">
+<section class="d-inline-flex">
 <!--Table Ações -->
-<section class="body d-inline-flex align-items-start flex-column">
+<section class="body  d-inline-flex align-items-start flex-column">
     <div class="container mb-auto" >
         <div class="tabela-rendimento-carteira">            
             <h3>Tabela de Ações</h3>
@@ -42,8 +42,54 @@
             </table>    
         </div>
     </div>
-
 </section>
+
+<div class="d-inline-flex body2">
+    <div class=" flex-column align-self-end">
+        <mat-card class="box-card">
+            <mat-card-header>
+                <mat-card-title >Cadastre-se</mat-card-title>
+            </mat-card-header>
+        <form action="" class="">
+        <mat-card-content >
+
+            <mat-form-field appearance="fill">
+                <mat-select required>
+                    <mat-option> Nenhuma </mat-option>
+                    <mat-option *ngFor="let a of list" [value]="a.nome">{{a.nome}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label> Data 01 </mat-label>
+                <input
+                    matInput
+                    [matDatepicker] = "picker"
+                    name="data01"
+                    type="text">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field> 
+
+            <mat-form-field>
+                <mat-label> Data 02 </mat-label>
+                <input
+                    matInput
+                    [matDatepicker] = "picker"
+                    name="data02"
+                    type="text">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div class="cadastro-usuario">
+            <button mat-raised-button  >Basic</button>
+        </div>
+        </mat-card-content>
+        </form>
+        </mat-card>
+    </div> 
+</div> 
+
 </section>
 <section fxFlexfill>
     <router-outlet></router-outlet>
