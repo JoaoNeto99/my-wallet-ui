@@ -1,0 +1,22 @@
+mat-toolbar {
+    background: darkslategray;
+}
+
+h2{
+    align-items: center;
+}
+
+h3 {
+    text-align: center;
+    
+}
+
+.flex-container{
+    display: flex;
+    justify-content: stretch;
+}
+
+.container{
+    margin-top: 30px;
+    width: 400px;
+}
