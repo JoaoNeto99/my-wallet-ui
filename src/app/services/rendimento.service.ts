@@ -18,8 +18,8 @@ export class RendimentoService {
   };
 
   // obtem acoes
-  getAcoes(): Observable<Acao> {
-    return this.httpClient.get<Acao>(this.url + '/' + 'acoes')
+  getAcoes(): Observable<Acao[]> {
+    return this.httpClient.get<Acao[]>(this.url + '/' + 'acoes')
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -45,7 +45,8 @@ export class RendimentoService {
   }
 
   // Obtem rendimento de um periodo
-  getRendimentoPeriodo(acao: string, dataInicial: string, dataFinal: string): Observable<Rendimento> {
+  getRendimentoPeriodo(dataInicial: string, dataFinal: string): Observable<Rendimento> {
+    console.log(this.url + '/' + 'periodo?data1=' + dataInicial + '&data2=' + dataFinal);
     return this.httpClient.get<Rendimento>(this.url + '/' + 'periodo?data1=' + dataInicial + '&data2=' + dataFinal)
       .pipe(
         retry(2),
