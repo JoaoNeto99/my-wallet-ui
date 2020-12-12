@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'my-wallet-ui';
 
   dataMin = new Date(2017, 0, 1);
+  dataInicio = new Date(2019,0, 1);
   dataMaxima = new Date();
 
   listRendimentoCarteira = new Array<Rendimento>();
