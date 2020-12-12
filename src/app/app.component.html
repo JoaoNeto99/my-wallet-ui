@@ -30,10 +30,11 @@
                                 matInput
                                 id="data1"
                                 formControlName = "data1"
-                                (dateInput)="onDate($event)"
-                                [matDatepicker] = "picker">
+                                [matDatepicker] = "picker"
+                                [min]="dataMin"
+                                [max]="dataMaxima">
                                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
+                                <mat-datepicker #picker [startAt]="dataMin"></mat-datepicker>
                         </mat-form-field> 
 
                         <mat-form-field>
@@ -42,10 +43,11 @@
                                 matInput
                                 formControlName = "data2"
                                 id="data2"
-                                (dateInput)="onDate($event)"
-                                [matDatepicker] = "picker2">
+                                [matDatepicker] = "picker2"
+                                [min]="dataMin"
+                                [max]="dataMaxima">
                                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                                <mat-datepicker #picker2></mat-datepicker>
+                                <mat-datepicker #picker2 [startAt]="dataMaxima"></mat-datepicker>
                         </mat-form-field>
 
                         <button
@@ -66,23 +68,62 @@
                         <tbody *ngFor="let rendimento of listRendimentoCarteira">
                             <tr>
                                 <th scope="row">Real</th>
-                                <td>R$ {{rendimento.rendimentoReal}}</td>
+                                <td>{{rendimento.rendimentoReal}} reais</td>
                             </tr>   
                             <tr>
                                 <th scope="row">Porcento</th>
                                 <td>{{rendimento.rendimentoPorcento}}%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Quantidade</th>
+                                <td>{{rendimento.quantidade}} ações</td>
                             </tr>
                         </tbody>
                     </table>    
                 </div>
             </div>
         </section>
-
-        <div class="d-inline-flex body2">
-            <div class=" flex-column align-self-end">
-                
-            </div> 
-        </div> 
+        <section class="d-inline-flex flex-column justify-content-center">
+            <!--Table Carteira-Rendimento-Periodo -->
+            <div class=" container " >
+                <div class="tabela-rendimento-carteira2">            
+                    <h3>Rendimento nesse Período</h3>
+                    <table class="table table-sm">
+                        <tbody *ngFor="let rendimento of listRendimentoPeriodo">
+                            <tr>
+                                <th scope="row">Data</th>
+                                <td>Entre {{rendimento.data1}} - {{rendimento.data2}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ação</th>
+                                <td>{{rendimento.acao}}</td>
+                            </tr> 
+                            <tr>
+                                <th scope="row">Real</th>
+                                <td>{{rendimento.rendimentoReal}} reais</td>
+                            </tr>   
+                            <tr>
+                                <th scope="row">Porcento</th>
+                                <td>{{rendimento.rendimentoPorcento}}%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Quantidade</th>
+                                <td>{{rendimento.quantidade}} ações</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Valor Investido</th>
+                                <td>{{rendimento.valorInvestido}} reais</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Valor Cotado</th>
+                                <td>{{rendimento.valorCotado}} reais</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
+            </div>
+        </section>
+       
     </section>
 
     <div fxFlexfill>

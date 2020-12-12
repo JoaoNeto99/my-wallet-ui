@@ -11,18 +11,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 
-export const DD_MM_YYYY_Format = {
-  parse: {
-      dateInput: 'LL',
-  },
-  display: {
-      dateInput: 'DD/MM/YYYY',
-      monthYearLabel: 'MMM YYYY',
-      dateA11yLabel: 'LL',
-      monthYearA11yLabel: 'MMMM YYYY',
-  },
-};
-
 @NgModule({
 
 
@@ -40,7 +28,7 @@ export const DD_MM_YYYY_Format = {
     CommonModule
   ],
   providers: [
-    {provide:  MAT_DATE_LOCALE, useValue: "sk-SK"}
+    {provide:  MAT_DATE_LOCALE, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]
 })
