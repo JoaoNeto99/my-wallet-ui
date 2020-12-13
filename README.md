@@ -22,7 +22,8 @@ Caso não retorne nada, é provavel que ou a transação ou data de cotação n�
 
 ## Para dúvidas
 
-Whatsapp: 62 99488-8883
+Whatsapp: (62) 99488-8883
+
 Email: joaoneto7499@gmail.com
 
-ou pelos meios de comunicação que vocês já possuem.
+Ou pelos meios de comunicação que vocês já possuem.
