@@ -1,27 +1,28 @@
 # MyWalletUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
+Esta aplicação contempla todo front-end do projeto MyWallet proposto pela equipe de recrutamento da ZgSoluções.
 
-## Development server
+## Para iniciar o servidor
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Digite `ng serve --proxy-config proxy.config.js` para iniciar o servidor. O mesmo estará disponivel no `http://localhost:4200/`. 
 
-## Code scaffolding
+## Tecnologias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O projeto foi construido em Angular, utilizando como apoio a interface visual o Bootstrap e o Angular-Material.
 
-## Build
+## Dicas de apoio ao uso
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Existem 3 campos na interface, um para escolher as ações e dois de datas. 
 
-## Running unit tests
+Para pesquisar o rendimento de uma ação em um dia específico, utilize o campo de ações e o primeiro campo de datas.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para pesquisar o rendimento da carteira data um periodo, utilize somente dos dois campos de datas.
 
-## Running end-to-end tests
+Caso não retorne nada, é provavel que ou a transação ou data de cotação não exista nesta data especificada. Infelizmente eu não tratei essas exceções que podem acontecer.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Para dúvidas
 
-## Further help
+Whatsapp: 62 99488-8883
+Email: joaoneto7499@gmail.com
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ou pelos meios de comunicação que vocês já possuem.
